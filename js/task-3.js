@@ -1,0 +1,26 @@
+
+// Напиши скрипт, який під час набору тексту в інпуті input#name-input (подія input) підставляє його поточне значення в span#name-output як ім’я для привітання. Обов’язково очищай значення в інпуті по краях від пробілів . Якщо інпут порожній або містить лише пробіли, то замість імені у спан має підставлятися рядок "Anonymous".
+
+// <input type="text" id="name-input" placeholder="Please enter your name" />
+// <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
+
+// const input = " JavaScript is awesome!    ";
+// const trimmedInput = input.trim();
+// console.log(trimmedInput); // "JavaScript is awesome!"
+// console.log(input); // " JavaScript is awesome!    "
+
+
+
+const input = document.querySelector("#name-input");
+const output = document.querySelector("#name-output");
+
+input.addEventListener("input", greeting);
+
+function greeting(event) {
+    if (event.currentTarget.value.trim() !== " ") {
+        output.textContent = `${event.currentTarget.value}`;
+    }
+    else {
+        output.textContent = "Anonymous";
+    }
+    }
