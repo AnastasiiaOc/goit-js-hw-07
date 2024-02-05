@@ -32,6 +32,5 @@ const images = [
 const gallery = document.querySelector(".gallery")
 const pictures = images.map(({ url, alt }) => `<li class = "image">
     <img src="${url}" alt="${alt}" class="img"> </li>`).join("")
-console.dir(pictures)
-
+    
 gallery.insertAdjacentHTML("beforeend", pictures);
