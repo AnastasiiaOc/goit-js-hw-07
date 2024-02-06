@@ -6,7 +6,7 @@ item.forEach((list) => {
     console.log(list.lastElementChild.childElementCount)
 })
 
-
+console.log(_.sum([4, 2, 8, 6]));
 
 
 
