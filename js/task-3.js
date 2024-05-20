@@ -1,4 +1,4 @@
-
+'use strict'
 
 const input = document.querySelector("#name-input");
 const output = document.querySelector("#name-output");
@@ -14,6 +14,8 @@ function greeting(event) {
     }
 }
     
+
+//=======================================================================
 
 // function greeting(event) {
 //     let trimmedValue = event.currentTarget.value.trim();

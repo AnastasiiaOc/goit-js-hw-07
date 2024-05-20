@@ -1,3 +1,5 @@
+'use strict'
+
 const images = [
   {
     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
@@ -29,8 +31,24 @@ const images = [
 ];
 
 
+
 const gallery = document.querySelector(".gallery");
-const pictures = images.map(({ url, alt }) => `<li class = "image">
-    <img src="${url}" alt="${alt}" class="img"> </li>`).join("");
+
+function pictureTemplate(obj) {
+ return `<li class = "image">
+    <img src="${obj.url}" alt="${obj.alt}" class="img"> </li>`
+ }
+function picturesTemplate(arr) {
+  return arr.map(pictureTemplate).join("")
+}   
+const markup = picturesTemplate(images)
+gallery.insertAdjacentHTML("beforeend", markup);
+
+
+
+//=========================better this=====================
+// const gallery = document.querySelector(".gallery");
+// const pictures = images.map(({ url, alt }) => `<li class = "image">
+//     <img src="${url}" alt="${alt}" class="img"> </li>`).join("");
     
-gallery.insertAdjacentHTML("beforeend", pictures);
+// gallery.insertAdjacentHTML("beforeend", pictures);

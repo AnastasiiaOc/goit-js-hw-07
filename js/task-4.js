@@ -1,6 +1,8 @@
 
 const registerForm = document.querySelector(".login-form");
 
+'use strict'
+
 registerForm.addEventListener("submit", handleSubmit);
 function handleSubmit(event) {
   event.preventDefault();
