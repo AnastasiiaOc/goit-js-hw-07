@@ -13,6 +13,20 @@ function greeting(event) {
         output.textContent = "Anonymous";
     }
 }
+
+
+
+// or this ( ++++++++++++++++++++++++++++++++++++++++++++++++++++)
+
+// function greeting() {
+//     if (input.value.trim() !== "") {
+//         output.textContent = `${input.value}`;
+//     }
+//     else {
+//         output.textContent = "Anonymous";
+//     }
+// }
+  
     
 
 //=======================================================================
